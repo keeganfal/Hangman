@@ -18,6 +18,7 @@ public class Main {
         }
         System.out.println(createdWord);
         System.out.println("Lives remaining: " + livesRemaning);
+        DisplayResult.generateHangman(livesRemaning);
 
         while (livesRemaning > 0){
             GatherInput gatherInput = new GatherInput();
@@ -40,6 +41,5 @@ public class Main {
             DisplayResult.generateHangman(livesRemaning);
             System.out.println();
         }
-        System.out.println("GAME OVER");
     }
 }
