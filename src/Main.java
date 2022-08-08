@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,9 +9,11 @@ public class Main {
         String word = randomWord.getWord();
         System.out.println(word);
 
+        ArrayList<String> createdWord = new ArrayList<>();
         for (int i = 0; i < word.length(); i++){
-            System.out.print(" _ ");
+            createdWord.add("_");
         }
+        System.out.println(createdWord);
 
         while (minus < 4){
 
@@ -21,10 +25,7 @@ public class Main {
                 System.out.println("Yes");
                 for (int i = 0; i < word.length(); i++){
                     if (word.charAt(i) == currentInput.charAt(0)){
-                        System.out.print(word.charAt(i));
-                    }
-                    else {
-                        System.out.print(" _ ");
+                        createdWord.set(i, Character.toString(word.charAt(i)));
                     }
                 }
             }
@@ -32,8 +33,7 @@ public class Main {
                 minus++;
                 System.out.println("minus+1");
             }
+            System.out.println(createdWord);
         }
-
-
     }
 }
